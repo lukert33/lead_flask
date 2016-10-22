@@ -1,19 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-	{% if title  %}
-		<title>{{ title }}</title>
-	{% else %}
-		<title>Residential Lead Pipe Inspection</title>
-	{% endif %}
-</head>
-<body>
-	<h1>Hello, {{ user.nickname }}</h1>
+{% extends "layout.html" %}
+{% block content %}
+<h1>Hello, {{ user.nickname }}</h1>
 	<div>
 		{% for post in posts %}
 			<h6>{{post.author.name}} just now stated</h6>
 			<p>{{ post.body }}</p>
 		{% endfor %}
 	</div>
-</body>
-</html>
+{% endblock %}
