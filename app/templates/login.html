@@ -9,6 +9,11 @@
 		<h3>Enter OpenID:</h3>
 		<fieldset>
 			{{ form.openid(size=80) }}
+			{% for error in form.errors.openid %}
+				<small style="color: red;">
+					{{ error }}
+				</small>
+			{% endfor %}
 
 			<small>
 				{{ form.remember_me }} Remember Me
